@@ -1,0 +1,310 @@
+/*
+#  ·················
+#  ··_______________
+#  ·/·___/·___/·___/
+#  /·/__(__··|__··)·
+#  \___/____/____/··
+#  ·················
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap'); 
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+
+
+
+/*------ Variables */
+:root{
+  
+  /*------ Colores */
+  --red1-color:#d90429;
+  --lila-color:#ce6ae2;
+  --black1-color:#2b2d42;
+  --black2-color:#403d39;
+  --black3-color:#313337;
+  --white1-color:#f9faf9;
+  --white2-color:#F1FAEE;
+  --green1-color:#06d6a0;
+  --green2-color:#037c0d;
+  --orange-color: #ff9a44;
+  --salmon-color: #fc6076;
+
+  /*------ fuente */
+
+  --font1-font-family:'Righteous', cursive;
+  --font3-font-family:'Monoton', cursive;
+  --font4-font-family:'Jura', sans-serif;
+  --font5-font-family:'Bungee Inline', cursive;
+  --font6-font-family:'Nova Mono', monospace;
+
+  /*------ Tipografía */
+  --normal:14px;
+  /*------ Espaciado */
+  --space:10px;
+  --space-2:20px;
+}
+
+
+
+.Righteous {
+  font-family: var(--font1-font-family);
+  font-size: 20px;
+}
+
+.Monoton{
+  font-family: var(--font3-font-family);
+}
+
+.Jura{
+  font-family: var(--font4-font-family);
+}
+
+.Bungee{
+  font-family: var(--font5-font-family);
+}
+
+
+.Nova{
+  font-family: var(--font6-font-family);
+}
+
+
+
+
+/* -------------------------------------------  */
+body, html {
+  height: 100%;
+  background-repeat: no-repeat;
+  background: url(../img/libro.jpg) no-repeat center center fixed;
+  background-size: 100% 100%;
+  text-align: center;
+  color: var(--orange-color);
+  font-size:var(--normal) ;
+  font-family: var(--font1-font-family);
+}
+
+.container{
+  background-color: #313337;
+  border-radius: 5%;
+  /* backdrop-filter: blur(50px); */
+}
+
+h1 {
+  color: var(--red1-color);
+}
+
+td {
+  color: var(--lila-color);
+}
+
+a:link {
+  text-decoration:none;
+  color: var(--orange-color);
+  text-align: center;
+}
+
+a:visited {
+  color: var(--orange-color);
+  }
+
+.botones {
+  background-color: var(--red1-color);
+  color: var(--orange-color);
+}
+
+.verde {
+  background-color: var(--green2-color);
+  color:var(--white2-color);
+}
+
+.naranja {
+  background-color: var(--orange-color);
+  color:var(--white2-color);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  background-color:var(--black1-color);
+}
+
+/*----------boton menu ---------*/
+/*
+.button
+{
+    position: relative;
+    padding: 1em 1.5em;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: transparent;
+    margin: 1em 0.8em;
+}
+.button.one
+{
+  color: var(--orange-color);
+}
+.button.one:after,
+.button.one:before
+{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 20%;
+    height: 20%;
+    border: 3px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+}
+.button.one:after
+{
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: var(--lila-color);
+    border-right-color: var(--lila-color);
+}
+.button.one:before
+{
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color:var(--lila-color);
+    border-left-color:var(--lila-color);
+}
+.button.one:hover:after,
+.button.one:hover:before
+{
+    border-bottom-color: #e94560;
+    border-right-color: #e94560;
+    border-top-color: #e94560;
+    border-left-color: #e94560;
+    width: 100%;
+    height: 100%;
+}
+*/
+/*--------BOTON BUSCAR -------*/
+
+
+
+/*
+.search {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  background: red;
+  border-radius: 50%;
+  z-index: 4;
+  box-shadow: 0 0 25px 0 white;
+  transition: all 1s;
+}
+
+  .search:hover {
+      cursor: pointer;
+  }
+
+  .search::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      bottom: 0;
+      right: 0;
+      left: 24px;
+      margin: auto;
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      transform: rotate(45deg);
+      transition: all 0.5s;
+  }
+
+  .search:after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      bottom: 0;
+      right: 0;
+      left: -5px;
+      margin: auto;
+      width: 25px;
+      height: 25px;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      transition: all .5s;
+  }
+
+  input {
+      font-family: monospace;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      outline: none;
+      border: none;
+      background: black;
+      padding: 0 80px 0 20px;
+      text-shadow: 0 0 10px red;
+      border-radius: 30px;
+      box-shadow: 0 0 25px 0 red, 0 20px 25px 0 rgba(0,0,0,.2);  
+      z-index: 5;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      opacity: 0;
+      transition: all 1s;
+  }
+
+  input:hover {
+      cursor: pointer;
+  }
+
+  input:focus {
+      width: 300px;
+      opacity: 1;
+      cursor: text;
+  }
+
+  input:focus ~ .search {
+      right: -250px;
+      background: red;
+      z-index: 8;
+  }
+
+  input:focus ~ .search:before {
+      background: #111;
+  }
+
+  input:focus ~ .search:after {
+      border: 4px solid #111;
+  }
+
+  input::placeholder {
+      color: red;
+      font-weight: bold;
+      opacity: 0.5;
+  }
+*/

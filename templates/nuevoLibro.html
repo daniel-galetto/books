@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Libros</title>
+</head>
+<body>
+           
+  <br><br><br>
+  
+    <div class="container"> 
+        <br>
+        <h1>Agregar un Libro</h1>
+        <br>    
+        <form action="#" method="post">
+            <div class="">
+                <label for="nombre">Titulo:</label>
+                <input type="text" class="form-control" maxlength="100" name="nombre" placeholder="Nombre del Libro">
+                <br>        
+                <label for="autor">Autor:</label>
+                <input maxlength="100" class="form-control" name="autor" placeholder="Autor del Libro">
+                <br>        
+                <label for="genero">Genero:</label>
+                <input maxlength="100" class="form-control" name="genero" placeholder="Genero del Libro">
+                <br>        
+                <button type="submit" class="btn btn-light m-3 botones verde">GUARDAR</button>
+            </div>
+        </form>
+        <br>
+    </div>
+
+    <br><br><br><br><br><br>
+    <!-- COMIENZO DEL FOOTER -->
+    <nav class="fixed-bottom footer">
+      <br>    
+      <p>© Copyright 2001-2020 Copyright.es - Todos los Derechos Reservados - Legal</p>
+      <br>
+  </nav> <!--  FIN DEL FOOTER -->  
+</body>
+
+</html>        

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Libros</title>
+</head>
+<body>
+           
+  <br><br><br>
+  
+    <div class="container"> 
+        <br>
+        <h2> Estás seguro que querés eliminar el libro <h1>{{libro.titulo}} ?</h1> </h2>
+            <div class="flex">
+                <form action="#" method='post'>
+                    <button type="submit" class="btn btn-light m-3 botones">ELIMINAR</button>
+                </form>
+                <a href='{{ url_for("mostrarLibros") }}'>
+                    <button class="btn btn-light m-3 botones naranja">CANCELAR</button>
+                </a>
+            </div>    
+    </div>
+
+    <br><br><br><br><br><br>
+    <!-- COMIENZO DEL FOOTER -->
+    <nav class="fixed-bottom footer">
+      <br>    
+      <p>© Copyright 2001-2020 Copyright.es - Todos los Derechos Reservados - Legal</p>
+      <br>
+  </nav> <!--  FIN DEL FOOTER -->  
+
+</body>
+</html>        
