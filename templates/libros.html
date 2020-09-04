@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Libros</title>
 
 </head>
 <body>
   <!-- Image and text -->
-  <nav class="navbar navbar-light bg-light">
-    <img src="{{url_for('static', filename='img/itec.jpeg')}}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+  <nav class="navbar navbar-light blur">
+    <img src="{{url_for('static', filename='img/itec.png')}}" width="80" height="80" class="d-inline-block align-top " alt="" loading="lazy">
     <p class="Righteous m-3" id="title">BIBLIOTECA ITEC RIO CUARTO</p> 
-   
     
-    <!-- 
-    
-    <button class="button one"> BUSCAR </button>
-    
-    <div class="container1">
-      <input type="text" placeholder="Search...">
-    <div class="search"></div> 
-    -->
-  </div> 
-    
-  </nav>
-           
-  <br><br><br>
+    <div class="d-flex flex-column">
+      <button type="button" class="btn btn-light m-1 botones"><a href="{{url_for('buscarLibros')}}">BUSCAR LIBRO</a></button> 
+      <button type="button" class="btn btn-light m-3 botones verde"><a href="{{url_for('nuevoLibro')}}">AGREGAR LIBRO</a></button>
+    </div> 
+    <div class="d-flex flex-column">
+      <button type="button" class="btn btn-light m-3 botones"><a href="{{url_for('ordenLibrosTitulo')}}">ORDENAR TITULO</a></button>
+      <button type="button" class="btn btn-light m-3 botones"><a href="{{url_for('ordenLibrosGenero')}}">ORDENAR GENERO</a></button>
+      <button type="button" class="btn btn-light m-3 botones"><a href="{{url_for('ordenLibrosAutor')}}">ORDENAR AUTOR</a></button>
+    </div> 
+  </nav> 
+  
+
+  <br>
   
     <div class="container"> 
         <br>
@@ -72,7 +74,7 @@
                   <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5z"/>
                 </svg>
               </a></button>
-             
+              <button type="button" class="btn btn-light m-1 botones"><a href="{{url_for('buscarLibros')}}">buscar </a></button> 
           </div>
         </div>
     </div >

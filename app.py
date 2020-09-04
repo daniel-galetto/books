@@ -22,10 +22,28 @@ def mostrarLibros():
     libros = session.query(Libro).all()
     return render_template('libros.html', libros=libros)
 
+# ORDEN ALFABETICO titulo / genero / autor
+@app.route('/orden/titulo')
+def ordenLibrosTitulo():
+    libros = session.query(Libro).order_by(Libro.titulo).all()
+    return render_template('libros.html', libros=libros)
+
+@app.route('/orden/genero')
+def ordenLibrosGenero():
+    libros = session.query(Libro).order_by(Libro.genero)
+    return render_template('libros.html', libros=libros)
+
+@app.route('/orden/autor')
+def ordenLibrosAutor():
+    libros = session.query(Libro).order_by(Libro.autor)
+    return render_template('libros.html', libros=libros)    
+
+# FUNCIONALIDAD BUSCAR
 @app.route('/buscar')
-def buscarLibros():
+def buscarLibros(): 
     libros = session.query(Libro).all()
-    return render_template('buscar.html')   
+    return render_template('buscar.html', libros=libros)    
+
 
 
 # This will let us Create a new book and save it in our database
@@ -54,6 +72,8 @@ def editarLibro(libro_id):
         return redirect(url_for('mostrarLibros')) # modificacion de identacion bug en boton volver
     else:
         return render_template('editarLibro.html', libro=libroEditado)
+
+
 
 
 # This will let us Delete our book
