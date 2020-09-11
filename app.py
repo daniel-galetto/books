@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 
+from wtforms import Form, StringField, SelectField # para buscar
+
 app = Flask(__name__)
 
 from sqlalchemy import create_engine
@@ -44,6 +46,11 @@ def buscarLibros():
     libros = session.query(Libro).all()
     return render_template('buscar.html', libros=libros)    
 
+# RECOMIENDA BUSCAR
+@app.route('/recomienda')
+def recomiendaLibro(): 
+    libros = session.query(Libro).all()
+    return render_template('recomiendaLibro.html', libros=libros) 
 
 
 # This will let us Create a new book and save it in our database
@@ -69,6 +76,7 @@ def editarLibro(libro_id):
             libroEditado.titulo = request.form['nombre'] 
             libroEditado.autor = request.form['autor'] # agrego modificacion de autor
             libroEditado.genero = request.form['genero'] # agrego modificacion de genero
+            session.commit() 
         return redirect(url_for('mostrarLibros')) # modificacion de identacion bug en boton volver
     else:
         return render_template('editarLibro.html', libro=libroEditado)
